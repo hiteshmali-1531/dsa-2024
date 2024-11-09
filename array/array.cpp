@@ -20,7 +20,7 @@ void reverse(int marks[], int size){
 int main(){
     int size = 5;
     int marks[size] = {99, 100 , 55, 37, 88};
-
+ 
     reverse(marks, sizeof(marks)/ sizeof(int));
     
     for(int m : marks){
