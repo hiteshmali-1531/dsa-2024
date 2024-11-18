@@ -12,9 +12,9 @@ int search_peak_index_in_mountain_array(vector<int> nums){
         if(nums[mid]>nums[mid-1] && nums[mid]>nums[mid+1]){
             return mid;
         }
-        if(nums[mid]<nums[mid-1]){
+        if(nums[mid]<nums[mid-1]){//right
             end = mid-1;
-        }else{
+        }else{ //left
             st = mid+1;
         }
     }
