@@ -7,7 +7,7 @@ int find_single_element_in_sorted_array(vector<int> nums){
     int end = nums.size()-1;
     while(st<=end){
         int mid = st + (end-st)/2;
-        if(mid == 0 && nums[0] != nums[1]){
+        if(mid == 0 && nums[0] != nums[1]){  
             return nums[mid];
         }
         if(mid == nums.size()-1 && nums[nums.size()-1] != nums[nums.size()-2]){
@@ -24,7 +24,7 @@ int find_single_element_in_sorted_array(vector<int> nums){
             st = mid+1;
 
             }
-        }else{
+        }else{ // odd
             if(nums[mid-1] == nums[mid]){//right
                 st = mid + 1;
             }else{
