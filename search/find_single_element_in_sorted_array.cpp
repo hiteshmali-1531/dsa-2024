@@ -5,6 +5,9 @@ using namespace std;
 int find_single_element_in_sorted_array(vector<int> nums){
     int st = 0;
     int end = nums.size()-1;
+    if(nums.size() == 1){
+        return nums[0];
+    }
     while(st<=end){
         int mid = st + (end-st)/2;
         if(mid == 0 && nums[0] != nums[1]){  
@@ -20,20 +23,20 @@ int find_single_element_in_sorted_array(vector<int> nums){
             if(nums[mid-1] == nums[mid]){//left
 
             end = mid-1;
-            }else{
+            }else{ // right
             st = mid+1;
 
             }
         }else{ // odd
             if(nums[mid-1] == nums[mid]){//right
                 st = mid + 1;
-            }else{
+            }else{//left
                 end = mid -1;
             }
         }
     }
     return -1;
-}
+}  
 
 int main(){
     vector<int> arr = {1, 1, 2, 3, 3, 4, 4, 8, 8};
