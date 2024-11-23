@@ -4,7 +4,7 @@ using namespace std;
 
 bool isValid(vector<int> &arr, int n , int m, int maxAllowed){
     int painter  = 1;
-    int time = 0;
+    int time = 0; 
     for(int i=0; i<n ; i++){
         if(arr[i] > maxAllowed){
             return false;
