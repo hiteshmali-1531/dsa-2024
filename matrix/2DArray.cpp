@@ -15,7 +15,9 @@ bool lenearSearch(int mat[][3], int rows, int cols, int key){
 int diagonalSum(int mat[][3], int n){
     int sum = 0;
     for(int i=0; i<n; i++){
+        // primary diagonal
         sum += mat[i][i];
+        // secondary diagonal
         if(i!=n-i-1){
             sum+= mat[i][n-i-1];
         }

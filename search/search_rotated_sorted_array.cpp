@@ -12,7 +12,7 @@ using namespace std;
             }
             if(nums[st]<=nums[mid]){
                 if(target>=nums[st] && target<nums[mid]){
-                    end = mid-1;
+                    end = mid-1;    
                 }else{
                     st = mid+1;
                 }

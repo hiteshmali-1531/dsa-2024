@@ -1,8 +1,6 @@
 #include<iostream>
 #include<cstring>
 #include<vector>
-
-
 using namespace std;
 
 vector<char> compression(vector<char> &str){

@@ -23,5 +23,6 @@ using namespace std;
         return ans.substr(1);
 }
 int main(){
+    cout<<reverseWords("Hello world");  
     return 0;
 }

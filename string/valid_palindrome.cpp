@@ -18,33 +18,44 @@ bool isAlphaNumeric(char ch){
         }
 }
 
-bool isPalindrome(string str){
-    int st =0;
-    int end = str.length()-1;
-    while(st<end){
-        if(!(isAlphaNumeric(str[st]))){
+// bool isPalindrome(string str){
+//     int st =0;
+//     int end = str.length()-1;
+//     while(st<end){
+//         if(!(isAlphaNumeric(str[st]))){
            
-            st++;
-            continue;
-        }
-        if(!isAlphaNumeric(str[end])){
+//             st++;
+//             continue;
+//         }
+//         if(!isAlphaNumeric(str[end])){
             
-            end--;
-            continue;
-        }
-        if(tolower(str[st]) == tolower(str[end])){
+//             end--;
+//             continue;
+//         }
+//         if(tolower(str[st]) == tolower(str[end])){
             
-            st++;
-            end--;
-        }else{
+//             st++;
+//             end--;
+//         }else{
+//             return false;
+//         }
+
+//     }
+//     return true;
+// }
+
+bool isPalindrome(string str){
+    for(int i=0; i<str.length()/2; i++){
+        int n = str.length();
+        if(str[i] != str[n-1-i]){
             return false;
         }
-
     }
     return true;
 }
 
 int main(){
-    cout<<isPalindrome("Ac3?e3c&a")<<endl;
+    // cout<<isPalindrome("Ac3?e3c&a")<<endl;
+    cout<<isPalindrome("hitesh")<<endl;
     return 0;
 }

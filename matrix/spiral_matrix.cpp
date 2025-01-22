@@ -45,5 +45,10 @@ vector<int> spiralOrder(vector<vector<int>>& matrix) {
 }
 
 int main(){
+    vector<vector<int>> mat = {{1,2,3}, {4,5,6},{7,8,9}};
+    vector<int> res = spiralOrder(mat);
+    for(int val : res){
+        cout<<val<<" ";
+    }
     return 0;
 }
